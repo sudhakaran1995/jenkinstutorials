@@ -3,12 +3,13 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                bat 'javac C:/Users/NAGARAJAN/Desktop/print/printseries.java'
+                'git clone https://github.com/sudhakaran1995/jenkinstutorials.git'
+                bat 'javac jenkinstutorials/printseries.java'
             }
         }
         stage('Test') { 
             steps {
-                bat 'cd C:/Users/NAGARAJAN/Desktop/print'
+                bat 'cd jenkinstutorials'
                 bat 'java printseries'
             }
         }
