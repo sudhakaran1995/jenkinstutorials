@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                'git clone https://github.com/sudhakaran1995/jenkinstutorials.git'
+                bat 'git clone https://github.com/sudhakaran1995/jenkinstutorials.git'
                 bat 'javac jenkinstutorials/printseries.java'
             }
         }
