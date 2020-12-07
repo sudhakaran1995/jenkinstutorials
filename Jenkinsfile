@@ -3,12 +3,11 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                bat 'javac jenkinstutorials/printseries.java'
+                bat 'javac printseries.java'
             }
         }
         stage('Test') { 
             steps {
-                bat 'cd jenkinstutorials'
                 bat 'java printseries'
             }
         }
